@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.12.0"> </script>\n'
 
@@ -12,23 +13,21 @@
     <input type="submit">
   </form>
   <script>
+    var x;
     function validateForm() {
-      var x = document.forms["myForm"]["filename"].value;
+      x = document.forms["myForm"]["filename"].value;
       alert(x);
       return x;
     }
     function preprocess() {
-      var y = validateForm();
-      const canvas = document.getElementById("y");
-      const ctx = canvas.getContext("2d");
+      const im = new Image()
+      im.src = x;
+      im.onload = () => {
+        const a = tf.fromPixels(im, 4)
+        a.print()
+        console.log(a.shape)
+      }
 
-      //get image data
-      imgData = ctx.getImageData(0, 0, 28, 28);
-
-      //convert to tensor 
-      const tensor = tf.browser.fromPixels(imgData);
-      console.log("Loaded!");
-      
     }
   </script>
 
