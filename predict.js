@@ -1,3 +1,5 @@
+import * as tf from './@tensorflow/tfjs';
+
 $("#image-selector").change(function () {
     let reader = new FileReader();
     reader.onload = function () {
@@ -28,7 +30,7 @@ $("#predict-button").click(async function () {
         .map(function (p, i) {
             return {
                 probability: p,
-                className: predictions[i]
+                className: NAMES[i]
          };
         }).sort(function (a, b) {
             return b.probability - a.probability;
