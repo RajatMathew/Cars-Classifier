@@ -1,3 +1,4 @@
+import * as tf from '@tensorflow/tfjs';
 $("#image-selector").change(function () {
     let reader = new FileReader();
     reader.onload = function () {
