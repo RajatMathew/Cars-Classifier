@@ -12,7 +12,7 @@ $("#image-selector").change(function () {
 
 let model;
 (async function () {
-    model = await tf.loadModel('/home/vishnu/Downloads/models/model/model.json');
+    model = await tf.loadModel('/model/model.json');
     $('.progress-bar').hide();
 })();
 
