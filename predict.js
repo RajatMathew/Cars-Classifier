@@ -28,7 +28,7 @@ $("#predict-button").click(async function () {
         .map(function (p, i) {
             return {
                 probability: p,
-                className:
+                className: predictions[i]
          };
         }).sort(function (a, b) {
             return b.probability - a.probability;
