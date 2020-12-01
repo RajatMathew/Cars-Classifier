@@ -1,0 +1,41 @@
+<head>
+    <title>Cars Classifier(Based on Cars196 Dataset)</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <script src="=https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.7"></script>
+    <script src="model_classes.js"></script>
+    <script src="/home/vishnu/javascript/predict.js"></script>
+    <main>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-6">
+                    <input id="image-selector" class="form-control border-0" type="file">
+                </div>
+                <div class="col-6">
+                    <button id="predict-button" class="btn btn-dark float-right">Predict</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col">
+                    <h2 class="ml-3">Predictions</h2>
+                    <ol id="prediction-list"></ol>
+                </div>
+            </div>
+            </hr>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="ml-3">Image</h2>
+                    <img id="selected-image" class="ml-3" src="" />
+                </div>
+            </div>
+    </main>
+
+
+</body>
+
+</html>
